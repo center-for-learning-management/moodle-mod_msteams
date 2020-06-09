@@ -15,19 +15,17 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Folder module version information
- *
  * @package    mod_msteams
- * @copyright  2020 Center for Learning Management (www.lernmanagement.at)
+ * @copyright  2020 Zentrum für Lernmanagement (http://www.lernmanagement.at)
  * @author     Robert Schrenk
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
+defined('MOODLE_INTERNAL') || die;
 
-$plugin->version   = 2020060900;
-$plugin->requires  = 2014051200;
-$plugin->component = 'mod_msteams';
-$plugin->cron      = 0;
-$plugin->maturity  = MATURITY_STABLE;
-$plugin->release   = '1.0 (Build: 2020060900)';
+function xmldb_msteams_upgrade($oldversion) {
+    global $DB;
+    $dbman = $DB->get_manager();
+
+    return true;
+}
