@@ -18,3 +18,10 @@ Simply add the MS Teams activity to your course page. It allows you to schedule 
 the meeting url, which is stored as url-parameter in a hidden form field.
 
 That way this activity works exactly as the url module with the only difference, that the URL is directly retrieved from Microsoft Teams.
+
+Here are some impressions:
+
+![Step 1](/doc/msteams-1.png)
+![Step 2](/doc/msteams-2.png)
+![Step 3](/doc/msteams-3.png)
+![Step 4](/doc/msteams-4.png)
