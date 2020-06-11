@@ -21,7 +21,11 @@ That way this activity works exactly as the url module with the only difference,
 
 Here are some impressions:
 
+1. Create meeting
 ![Step 1](/doc/msteams-1.png)
+2. Enter meeting details
 ![Step 2](/doc/msteams-2.png)
+3. Fill out module creation form
 ![Step 3](/doc/msteams-3.png)
+4. Click the activity on the course page to enter meeting
 ![Step 4](/doc/msteams-4.png)
