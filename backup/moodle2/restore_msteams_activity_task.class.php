@@ -25,7 +25,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-require_once($CFG->dirroot . '/mod/url/backup/moodle2/restore_url_stepslib.php'); // Because it exists (must)
+require_once($CFG->dirroot . '/mod/msteams/backup/moodle2/restore_msteams_stepslib.php'); // Because it exists (must)
 
 /**
  * url restore task that provides all the settings and steps to perform one
@@ -84,9 +84,9 @@ class restore_msteams_activity_task extends restore_activity_task {
     static public function define_restore_log_rules() {
         $rules = array();
 
-        $rules[] = new restore_log_rule('url', 'add', 'view.php?id={course_module}', '{url}');
-        $rules[] = new restore_log_rule('url', 'update', 'view.php?id={course_module}', '{url}');
-        $rules[] = new restore_log_rule('url', 'view', 'view.php?id={course_module}', '{url}');
+        $rules[] = new restore_log_rule('msteams', 'add', 'view.php?id={course_module}', '{url}');
+        $rules[] = new restore_log_rule('msteams', 'update', 'view.php?id={course_module}', '{url}');
+        $rules[] = new restore_log_rule('msteams', 'view', 'view.php?id={course_module}', '{url}');
 
         return $rules;
     }
@@ -104,7 +104,7 @@ class restore_msteams_activity_task extends restore_activity_task {
     static public function define_restore_log_rules_for_course() {
         $rules = array();
 
-        $rules[] = new restore_log_rule('url', 'view all', 'index.php?id={course}', null);
+        $rules[] = new restore_log_rule('msteams', 'view all', 'index.php?id={course}', null);
 
         return $rules;
     }
