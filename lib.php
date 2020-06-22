@@ -253,7 +253,7 @@ function msteams_view($msteams, $course, $cm, $context) {
         'objectid' => $msteams->id
     );
 
-    $event = \mod_url\event\course_module_viewed::create($params);
+    $event = \mod_msteams\event\course_module_viewed::create($params);
     $event->add_record_snapshot('course_modules', $cm);
     $event->add_record_snapshot('course', $course);
     $event->add_record_snapshot('msteams', $msteams);

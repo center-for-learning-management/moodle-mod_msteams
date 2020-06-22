@@ -17,7 +17,7 @@
 /**
  * The mod_msteams instance list viewed event.
  *
- * @package    mod_url
+ * @package    mod_msteams
  * @copyright  2013 Mark Nelson <markn@moodle.com>
  *             2020 Robert Schrenk (mod_msteams)
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later

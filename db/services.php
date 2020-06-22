@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * URL external functions and service definitions.
+ * mod_msteams external functions and service definitions.
  *
  * @package    mod_msteams
  * @category   external
@@ -27,7 +27,6 @@
 defined('MOODLE_INTERNAL') || die;
 
 $functions = array(
-
     'mod_msteams_view_msteams' => array(
         'classname'     => 'mod_msteams_external',
         'methodname'    => 'view_msteams',

@@ -62,9 +62,9 @@ class mod_msteams_external extends external_api {
      * @since Moodle 3.0
      * @throws moodle_exception
      */
-    public static function view_url($msteamsid) {
+    public static function view_msteams($msteamsid) {
         global $DB, $CFG;
-        require_once($CFG->dirroot . "/mod/url/lib.php");
+        require_once($CFG->dirroot . "/mod/msteams/lib.php");
 
         $params = self::validate_parameters(self::view_msteams_parameters(),
                                             array(

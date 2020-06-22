@@ -45,7 +45,7 @@ class restore_msteams_activity_task extends restore_activity_task {
      */
     protected function define_my_steps() {
         // url only has one structure step
-        $this->add_step(new restore_url_activity_structure_step('msteams_structure', 'msteams.xml'));
+        $this->add_step(new restore_msteams_activity_structure_step('msteams_structure', 'msteams.xml'));
     }
 
     /**

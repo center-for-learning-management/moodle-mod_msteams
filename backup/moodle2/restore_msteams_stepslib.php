@@ -41,7 +41,7 @@ class restore_msteams_activity_structure_step extends restore_activity_structure
         return $this->prepare_activity_structure($paths);
     }
 
-    protected function process_url($data) {
+    protected function process_msteams($data) {
         global $DB;
 
         $data = (object)$data;

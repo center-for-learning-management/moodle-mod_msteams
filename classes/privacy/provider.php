@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Privacy Subsystem implementation for mod_url.
+ * Privacy Subsystem implementation for mod_msteams.
  *
  * @package    mod_msteams
  * @copyright  2020 Robert Schrenk (Center for Learning Management)

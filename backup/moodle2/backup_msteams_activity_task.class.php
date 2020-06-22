@@ -44,7 +44,7 @@ class backup_msteams_activity_task extends backup_activity_task {
      * Defines a backup step to store the instance data in the url.xml file
      */
     protected function define_my_steps() {
-        $this->add_step(new backup_url_activity_structure_step('msteams_structure', 'msteams.xml'));
+        $this->add_step(new backup_msteams_activity_structure_step('msteams_structure', 'msteams.xml'));
     }
 
     /**
