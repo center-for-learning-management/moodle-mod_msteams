@@ -25,13 +25,13 @@
  */
 
 
-$string['urlsuccessfullycreated'] = 'Your Meeting-URL was successfully created.';
+$string['urlsuccessfullycreated'] = 'Ihr Meeting-Link wurde erfolgreich erstellt.';
 
-$string['clicktoopen'] = 'Click {$a} link to open resource.';
-$string['contentheader'] = 'Content';
-$string['createurl'] = 'Create a MS Teams Meeting';
+$string['clicktoopen'] = 'Klicken Sie auf {$a}, um die Aktivität zu öffnen';
+$string['contentheader'] = 'Inhalt';
+$string['createurl'] = 'Ein MS Teams Meeting erstellen';
 $string['externalurl'] = 'MS Teams URL';
-$string['invalidstoredurl'] = 'Cannot display this resource, URL is invalid.';
+$string['invalidstoredurl'] = 'Diese Aktivität kann nicht angezeigt wrden, die URL ist ungültig.';
 
 $string['indicator:cognitivedepth'] = 'MS Teams cognitive';
 $string['indicator:cognitivedepth_help'] = 'This indicator is based on the cognitive depth reached by the student in a MS Teams resource.';
@@ -43,23 +43,23 @@ $string['indicator:socialbreadth_help'] = 'This indicator is based on the social
 $string['indicator:socialbreadthdef'] = 'MS Teams social';
 $string['indicator:socialbreadthdef_help'] = 'The participant has reached this percentage of the social engagement offered by the MS Teams resources during this analysis interval (Levels = No participation, Participant alone)';
 $string['indicator:socialbreadthdef_link'] = 'Learning_analytics_indicators#Social_breadth';
-$string['invalidurl'] = 'Entered MS Teams URL is invalid';
+$string['invalidurl'] = 'Die eingegebene MS Teams URL ist ungültig';
 $string['meetingsapplink'] = 'Meetings App URL';
-$string['meetingsapplink_desc'] = 'This is URL of meeting app location';
+$string['meetingsapplink_desc'] = 'Dies ist die URL für den Meeting App Ort';
 $string['modulename'] = 'MS Teams Meeting';
-$string['modulename_help'] = 'The MS Teams module enables a teacher to provide an invitation link to an MS Teams meeting as a course resource.
+$string['modulename_help'] = 'Das MS Teams Modul erlaubt es Lehrerinnen und Lehrern einen Einladungslink zu einem MS Teams Meeting innerhalb eines Kurses zu erstellen.
 
-At least the user creating the meeting requires a Microsoft Account. According to the configuration of the Microsoft O365-Tenant it is possible to invite users, that do not have an own Microsoft Account.';
+Die Nutzer/innen, die das Meeting erstellen, benötigen einen Microsoft Account. Je nach Konfiguration des Microsoft O365-Tenant ist es möglich auch Nutzer/innen ohne Microsoft Account einzuladen.';
 $string['modulename_link'] = 'mod/msteams/view';
 $string['modulenameplural'] = 'MS Teams Meetings';
-$string['page-mod-url-x'] = 'Any MS Teams module page';
-$string['pluginadministration'] = 'MS Teams module administration';
+$string['page-mod-url-x'] = 'Eine MS Teams Modul Seite';
+$string['pluginadministration'] = 'MS Teams Modul Administration';
 $string['pluginname'] = 'MS Teams Meeting';
-$string['printintro'] = 'Display MS Teams description';
-$string['printintroexplain'] = 'Display MS Teams description below content? Some display types may not display description even if enabled.';
-$string['privacy:metadata'] = 'The MS Teams resource plugin does not store any personal data.';
+$string['printintro'] = 'MS Teams Beschreibung anzeigen';
+$string['printintroexplain'] = 'MS Teams Beschreibung unter Inhalt anzeigen? Einige Anzeigearten können die Beschreibung nicht anzeigen, obwohl diese aktiviert ist.';
+$string['privacy:metadata'] = 'Das MS Teams Aktivitäts-Plugin speichert keine persönlichen Daten.';
 
 $string['search:activity'] = 'MS Teams';
 $string['serverurl'] = 'MS Teams URL';
-$string['msteams:addinstance'] = 'Add a new MS Teams meeting';
-$string['msteams:view'] = 'Open MS Teams meeting';
+$string['msteams:addinstance'] = 'Ein neues MS Teams Meeting erstellen';
+$string['msteams:view'] = 'MS Teams Meeting öffnen';
