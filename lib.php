@@ -167,23 +167,23 @@ function msteams_get_coursemodule_info($coursemodule) {
     global $CFG, $DB;
     require_once("$CFG->dirroot/mod/url/locallib.php");
 
-    if (!$msteams = $DB->get_record('msteams', array('id'=>$coursemodule->instance),
+    if (!$msteam = $DB->get_record('msteams', array('id'=>$coursemodule->instance),
             'id, name, externalurl, intro, introformat')) {
         return NULL;
     }
 
     $info = new cached_cm_info();
-    $info->name = $msteams->name;
+    $info->name = $msteam->name;
 
     //note: there should be a way to differentiate links from normal resources
-    $info->icon = url_guess_icon($msteams->externalurl, 24);
+    $info->icon = url_guess_icon($msteam->externalurl, 24);
 
     $fullurl = "$CFG->wwwroot/mod/msteams/view.php?id=$coursemodule->id&amp;redirect=1";
     $info->onclick = "window.open('$fullurl'); return false;";
 
     if ($coursemodule->showdescription) {
         // Convert intro to html. Do not filter cached version, filters run at display time.
-        $info->content = format_module_intro('msteams', $msteams, $coursemodule->id, false);
+        $info->content = format_module_intro('msteams', $msteam, $coursemodule->id, false);
     }
 
     return $info;
@@ -219,19 +219,19 @@ function msteams_export_contents($cm, $baseurl) {
         return null;
     }
 
-    $msteams = array();
-    $msteams['type'] = 'url';
-    $msteams['filename']     = clean_param(format_string($msteamsrecord->name), PARAM_FILE);
-    $msteams['filepath']     = null;
-    $msteams['filesize']     = 0;
-    $msteams['fileurl']      = $fullurl;
-    $msteams['timecreated']  = null;
-    $msteams['timemodified'] = $msteamsrecord->timemodified;
-    $msteams['sortorder']    = null;
-    $msteams['userid']       = null;
-    $msteams['author']       = null;
-    $msteams['license']      = null;
-    $contents[] = $msteams;
+    $msteam = array();
+    $msteam['type'] = 'url';
+    $msteam['filename']     = clean_param(format_string($msteamsrecord->name), PARAM_FILE);
+    $msteam['filepath']     = null;
+    $msteam['filesize']     = 0;
+    $msteam['fileurl']      = $fullurl;
+    $msteam['timecreated']  = null;
+    $msteam['timemodified'] = $msteamsrecord->timemodified;
+    $msteam['sortorder']    = null;
+    $msteam['userid']       = null;
+    $msteam['author']       = null;
+    $msteam['license']      = null;
+    $contents[] = $msteam;
 
     return $contents;
 }
@@ -245,18 +245,18 @@ function msteams_export_contents($cm, $baseurl) {
  * @param  stdClass $context    context object
  * @since Moodle 3.0
  */
-function msteams_view($msteams, $course, $cm, $context) {
+function msteams_view($msteam, $course, $cm, $context) {
 
     // Trigger course_module_viewed event.
     $params = array(
         'context' => $context,
-        'objectid' => $msteams->id
+        'objectid' => $msteam->id
     );
 
     $event = \mod_msteams\event\course_module_viewed::create($params);
     $event->add_record_snapshot('course_modules', $cm);
     $event->add_record_snapshot('course', $course);
-    $event->add_record_snapshot('msteams', $msteams);
+    $event->add_record_snapshot('msteams', $msteam);
     $event->trigger();
 
     // Completion.
