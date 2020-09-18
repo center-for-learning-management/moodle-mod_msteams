@@ -55,7 +55,7 @@ class mod_msteams_mod_form extends moodleform_mod {
         $mform->addRule('name', null, 'required', null, 'client');
         $mform->addRule('name', get_string('maximumchars', '', 255), 'maxlength', 255, 'client');
 
-        $mform->addElement('hidden', 'externalurl');
+        $mform->addElement('text', 'externalurl', get_string('url'), array('disabled' => 'disabled', 'size'=>'48'));
         $mform->setType('externalurl', PARAM_RAW_TRIMMED);
         $mform->addRule('externalurl', null, 'required', null, 'client');
         $this->standard_intro_elements();
