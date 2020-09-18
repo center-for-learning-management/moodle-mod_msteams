@@ -25,9 +25,9 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2020062200;
+$plugin->version   = 2020091800;
 $plugin->requires  = 2014051200;
 $plugin->component = 'mod_msteams';
 $plugin->cron      = 0;
 $plugin->maturity  = MATURITY_STABLE;
-$plugin->release   = '1.0 (Build: 2020062200)';
+$plugin->release   = '1.1 (Build: 2020091800)';
