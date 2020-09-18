@@ -63,3 +63,6 @@ $string['search:activity'] = 'MS Teams';
 $string['serverurl'] = 'MS Teams URL';
 $string['msteams:addinstance'] = 'Add a new MS Teams meeting';
 $string['msteams:view'] = 'Open MS Teams meeting';
+
+$string['url'] = 'Meeting-URL';
+$string['url_help'] = 'The Meeting-URL is created by using the embedded tool at the top of the form.';
