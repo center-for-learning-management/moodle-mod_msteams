@@ -31,7 +31,7 @@ $string['clicktoopen'] = 'Click {$a} link to open resource.';
 $string['contentheader'] = 'Content';
 $string['createurl'] = 'Create a MS Teams Meeting';
 $string['externalurl'] = 'MS Teams URL';
-$string['invalidstoredurl'] = 'Cannot display this resource, URL is invalid.';
+$string['invalidstoredurl'] = 'Cannot display this resource, the meeting-URL is invalid.';
 
 $string['indicator:cognitivedepth'] = 'MS Teams cognitive';
 $string['indicator:cognitivedepth_help'] = 'This indicator is based on the cognitive depth reached by the student in a MS Teams resource.';
@@ -63,3 +63,6 @@ $string['search:activity'] = 'MS Teams';
 $string['serverurl'] = 'MS Teams URL';
 $string['msteams:addinstance'] = 'Add a new MS Teams meeting';
 $string['msteams:view'] = 'Open MS Teams meeting';
+
+$string['url'] = 'Meeting-URL';
+$string['url_help'] = 'The Meeting-URL is created by using the embedded tool at the top of the form.';

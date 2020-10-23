@@ -16,7 +16,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * URL module main user interface
+ * msteams module main user interface
  *
  * @package    mod_msteams
  * @copyright  2020 Robert Schrenk
@@ -30,17 +30,17 @@ require_once("$CFG->dirroot/mod/url/locallib.php");
 require_once($CFG->libdir . '/completionlib.php');
 
 $id       = optional_param('id', 0, PARAM_INT);        // Course module ID
-$u        = optional_param('u', 0, PARAM_INT);         // URL instance id
+$u        = optional_param('u', 0, PARAM_INT);         // teams instance id
 $redirect = optional_param('redirect', 0, PARAM_BOOL);
 $forceview = optional_param('forceview', 0, PARAM_BOOL);
 
 if ($u) {  // Two ways to specify the module
-    $url = $DB->get_record('msteams', array('id'=>$u), '*', MUST_EXIST);
-    $cm = get_coursemodule_from_instance('msteams', $url->id, $url->course, false, MUST_EXIST);
+    $msteam = $DB->get_record('msteams', array('id'=>$u), '*', MUST_EXIST);
+    $cm = get_coursemodule_from_instance('msteams', $msteam->id, $msteam->course, false, MUST_EXIST);
 
 } else {
     $cm = get_coursemodule_from_id('msteams', $id, 0, false, MUST_EXIST);
-    $url = $DB->get_record('msteams', array('id'=>$cm->instance), '*', MUST_EXIST);
+    $msteam = $DB->get_record('msteams', array('id'=>$cm->instance), '*', MUST_EXIST);
 }
 
 $course = $DB->get_record('course', array('id'=>$cm->course), '*', MUST_EXIST);
@@ -50,18 +50,18 @@ $context = context_module::instance($cm->id);
 require_capability('mod/msteams:view', $context);
 
 // Completion and trigger events.
-msteams_view($url, $course, $cm, $context);
+msteams_view($msteam, $course, $cm, $context);
 
 $PAGE->set_url('/mod/msteams/view.php', array('id' => $cm->id));
 
 // Make sure URL exists before generating output - some older sites may contain empty urls
 // Do not use PARAM_URL here, it is too strict and does not support general URIs!
-$exturl = trim($url->externalurl);
+$exturl = trim($msteam->externalurl);
 if (empty($exturl) or $exturl === 'http://') {
-    url_print_header($url, $cm, $course);
-    url_print_heading($url, $cm, $course);
-    url_print_intro($url, $cm, $course);
-    notice(get_string('invalidstoredurl', 'url'), new moodle_url('/course/view.php', array('id'=>$cm->course)));
+    url_print_header($msteam, $cm, $course);
+    url_print_heading($msteam, $cm, $course);
+    url_print_intro($msteam, $cm, $course);
+    notice(get_string('invalidstoredurl', 'msteams'), new moodle_url('/course/view.php', array('id'=>$cm->course)));
     die;
 }
 unset($exturl);
@@ -72,9 +72,9 @@ if ($displaytype == RESOURCELIB_DISPLAY_OPEN) {
 }
 
 if ($redirect && !$forceview) {
-    // coming from course page or url index page,
+    // coming from course page or msteams index page,
     // the redirection is needed for completion tracking and logging
-    $fullurl = str_replace('&amp;', '&', url_get_full_url($url, $cm, $course));
+    $fullurl = str_replace('&amp;', '&', url_get_full_url($msteam, $cm, $course));
 
     if (!course_get_format($course)->has_view_page()) {
         // If course format does not have a view page, add redirection delay with a link to the edit page.
@@ -95,14 +95,4 @@ if ($redirect && !$forceview) {
     redirect($fullurl);
 }
 
-switch ($displaytype) {
-    case RESOURCELIB_DISPLAY_EMBED:
-        url_display_embed($url, $cm, $course);
-        break;
-    case RESOURCELIB_DISPLAY_FRAME:
-        url_display_frame($url, $cm, $course);
-        break;
-    default:
-        url_print_workaround($url, $cm, $course);
-        break;
-}
+url_print_workaround($msteam, $cm, $course);

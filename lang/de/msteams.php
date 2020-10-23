@@ -31,7 +31,7 @@ $string['clicktoopen'] = 'Klicken Sie auf {$a}, um die Aktivität zu öffnen';
 $string['contentheader'] = 'Inhalt';
 $string['createurl'] = 'Ein MS Teams Meeting erstellen';
 $string['externalurl'] = 'MS Teams URL';
-$string['invalidstoredurl'] = 'Diese Aktivität kann nicht angezeigt wrden, die URL ist ungültig.';
+$string['invalidstoredurl'] = 'Diese Aktivität kann nicht angezeigt werden, die Meeting-URL ist ungültig.';
 
 $string['indicator:cognitivedepth'] = 'MS Teams cognitive';
 $string['indicator:cognitivedepth_help'] = 'This indicator is based on the cognitive depth reached by the student in a MS Teams resource.';
@@ -63,3 +63,6 @@ $string['search:activity'] = 'MS Teams';
 $string['serverurl'] = 'MS Teams URL';
 $string['msteams:addinstance'] = 'Ein neues MS Teams Meeting erstellen';
 $string['msteams:view'] = 'MS Teams Meeting öffnen';
+
+$string['url'] = 'Meeting-URL';
+$string['url_help'] = 'Die Meeting-URL wird mit dem oberhalb eingebetteten Formular erstellt!';
