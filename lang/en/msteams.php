@@ -57,7 +57,9 @@ $string['pluginadministration'] = 'MS Teams module administration';
 $string['pluginname'] = 'MS Teams Meeting';
 $string['printintro'] = 'Display MS Teams description';
 $string['printintroexplain'] = 'Display MS Teams description below content? Some display types may not display description even if enabled.';
-$string['privacy:metadata'] = 'The MS Teams resource plugin does not store any personal data.';
+
+$string['privacy:metadata:msteamsapp'] = 'The MS Teams App is an external tool to connect users to O365.';
+$string['privacy:metadata:msteamsapp:userlang'] = 'The users language is sent from Moodle to the MS Teams App';
 
 $string['search:activity'] = 'MS Teams';
 $string['serverurl'] = 'MS Teams URL';

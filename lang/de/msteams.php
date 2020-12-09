@@ -57,7 +57,6 @@ $string['pluginadministration'] = 'MS Teams Modul Administration';
 $string['pluginname'] = 'MS Teams Meeting';
 $string['printintro'] = 'MS Teams Beschreibung anzeigen';
 $string['printintroexplain'] = 'MS Teams Beschreibung unter Inhalt anzeigen? Einige Anzeigearten können die Beschreibung nicht anzeigen, obwohl diese aktiviert ist.';
-$string['privacy:metadata'] = 'Das MS Teams Aktivitäts-Plugin speichert keine persönlichen Daten.';
 
 $string['search:activity'] = 'MS Teams';
 $string['serverurl'] = 'MS Teams URL';
