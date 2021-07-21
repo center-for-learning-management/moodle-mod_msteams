@@ -26,7 +26,7 @@ namespace mod_msteams\privacy;
 defined('MOODLE_INTERNAL') || die();
 
 class provider implements \core_privacy\local\metadata\provider {
-    public static function get_metadata(collection $collection) : collection {
+    public static function get_metadata($collection) {
         $collection->add_external_location_link('msteamsapp', [
             'userlang' => 'privacy:metadata:msteamsapp:userlang',
         ], 'privacy:metadata:msteamsapp');
