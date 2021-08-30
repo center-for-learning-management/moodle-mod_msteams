@@ -33,4 +33,5 @@ $plugin->maturity  = MATURITY_STABLE;
 $plugin->release   = '1.4';
 $plugin->dependencies = [
     'editor_atto' => 2013111800,
+    'atto_teamsmeeting' => 2020032702,
 ];
