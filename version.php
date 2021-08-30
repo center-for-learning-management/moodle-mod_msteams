@@ -25,9 +25,12 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2021072100;
+$plugin->version   = 2021083000;
 $plugin->requires  = 2014051200;
 $plugin->component = 'mod_msteams';
 $plugin->cron      = 0;
 $plugin->maturity  = MATURITY_STABLE;
-$plugin->release   = '1.3';
+$plugin->release   = '1.4';
+$plugin->dependencies = [
+    'editor_atto' => 2013111800,
+];
