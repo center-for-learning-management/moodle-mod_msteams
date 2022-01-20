@@ -35,9 +35,11 @@ class mod_msteams_mod_form extends moodleform_mod {
         $mform = $this->_form;
 
         $config = get_config('msteams');
+        $url = $config->meetingapplink . '?url=' . rawurlencode($CFG->wwwroot) . '&local=' . $USER->lang;
 
         $html = implode("\n", array(
-            '<iframe id="meetingapp" class="hidden" src="' . $config->meetingapplink . '?url=' . rawurlencode($CFG->wwwroot) . '&local=' . $USER->lang . '" width="100%" height="500"></iframe>',
+            '<iframe id="meetingapp" class="hidden" src="' . $url . '" width="100%" height="500"></iframe>',
+            '<iframe id="meetingappcookiehelper" class="hidden" src="' . $CFG->wwwroot . '/mod/msteams/cookie.php" width="100%" height="500"></iframe>',
             '<p id="meetingsuccess" class="alert alert-success hidden">' . get_string('urlsuccessfullycreated', 'mod_msteams') . '</p>',
         ));
         $mform->addElement('html', $html);

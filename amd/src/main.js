@@ -21,6 +21,7 @@ define(
                     $('#meetingapp').addClass('hidden');
                     $('#meetingsuccess').removeClass('hidden');
                     clearInterval(M.interval);
+                    $('#meetingappcookiehelper').attr('src', 'about:blank');
                 }
             });
         },
