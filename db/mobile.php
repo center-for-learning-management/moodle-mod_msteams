@@ -26,7 +26,11 @@ $addons = array(
                     'icon'  => $CFG->wwwroot . '/mod/msteams/pix/icon.svg',
                     'class' => '',
                 ),
-            )
+            ),
+            'lang' => array(
+                array('invalidstoredurl', 'mod_msteams'),
+                array('externalurl', 'mod_msteams'),
+            ),
         )
     )
 );

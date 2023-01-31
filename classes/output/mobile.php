@@ -47,7 +47,7 @@ class mobile {
             $outstring = get_string('invalidstoredurl', 'msteams');
         }
         else{
-
+            $outstring ='<a href="'.$exturl.'">'.get_string("externalurl", 'msteams').'</a>';
         }
 
         return array(
@@ -57,7 +57,6 @@ class mobile {
                     'html' => '<h1 class="text-center">'.$outstring.'</h1>',
                 ),
             ),
-            'javascript' => file_get_contents($CFG->dirroot . '/mod/hvp/library/js/h5p-resizer.js'),
         );
     }
 }
