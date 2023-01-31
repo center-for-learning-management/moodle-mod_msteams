@@ -17,7 +17,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $addons = array(
-    "mod_hvp" => array( // Plugin identifier.
+    "mod_msteams" => array( // Plugin identifier.
         'handlers' => array( // Different places where the plugin will display content.
             'coursemsteams' => array(
                 'delegate'    => 'CoreCourseModuleDelegate', // Delegate (where to display the link to the plugin).
