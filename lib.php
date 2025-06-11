@@ -176,7 +176,7 @@ function msteams_get_coursemodule_info($coursemodule) {
     $info->name = $msteam->name;
 
     //note: there should be a way to differentiate links from normal resources
-    $info->icon = url_guess_icon($msteam->externalurl, 24);
+    $info->icon = url_guess_icon($msteam->externalurl/*, 24*/);
 
     $fullurl = "$CFG->wwwroot/mod/msteams/view.php?id=$coursemodule->id&amp;redirect=1";
     $info->onclick = "window.open('$fullurl'); return false;";
