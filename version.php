@@ -30,5 +30,5 @@ $plugin->requires  = 2014051200;
 $plugin->component = 'mod_msteams';
 $plugin->cron      = 0;
 $plugin->maturity  = MATURITY_STABLE;
-$plugin->release   = '1.5';
+$plugin->release   = '1.6';
 $plugin->dependencies = [];
