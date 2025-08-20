@@ -35,7 +35,7 @@ if ($ADMIN->fulltree) {
     // Meeting application link.
     $name = new lang_string('meetingsapplink', 'msteams');
     $desc = new lang_string('meetingsapplink_desc', 'msteams');
-    $default = 'https://enovation.ie/msteams';
+    $default = 'https://enomsteams.z16.web.core.windows.net';
 
     $setting = new admin_setting_configtext('msteams/meetingapplink',
                                               $name,
