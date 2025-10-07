@@ -31,4 +31,6 @@ $plugin->component = 'mod_msteams';
 $plugin->cron      = 0;
 $plugin->maturity  = MATURITY_STABLE;
 $plugin->release   = '1.6';
-$plugin->dependencies = [];
+$plugin->dependencies = [
+    'tiny_teamsmeeting' => 2023120602,
+];
