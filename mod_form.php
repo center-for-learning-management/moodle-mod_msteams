@@ -30,12 +30,12 @@ require_once ($CFG->dirroot.'/course/moodleform_mod.php');
 
 class mod_msteams_mod_form extends moodleform_mod {
     function definition() {
-        global $CFG, $DB, $PAGE, $USER;
+        global $CFG, $COURSE, $DB, $PAGE, $USER;
 
         $mform = $this->_form;
 
         $config = get_config('msteams');
-        $url = $config->meetingapplink . '?url=' . rawurlencode($CFG->wwwroot) . '&local=' . $USER->lang;
+        $url = $config->meetingapplink . '?url=' . rawurlencode($CFG->wwwroot) . '&local=' . $USER->lang . '&courseid=' . $COURSE->id;
 
         $html = implode("\n", array(
             '<iframe id="meetingapp" class="hidden" src="' . $url . '" width="100%" height="500"></iframe>',
