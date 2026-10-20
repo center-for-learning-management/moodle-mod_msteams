@@ -35,11 +35,14 @@ class mod_msteams_mod_form extends moodleform_mod {
         $mform = $this->_form;
 
         $config = get_config('msteams');
-        $url = $config->meetingapplink . '?url=' . rawurlencode($CFG->wwwroot) . '&local=' . $USER->lang;
+        $usetoken = class_exists('tiny_teamsmeeting\token');
+        $params = ['url' => $CFG->wwwroot, 'local' => $USER->lang, 'locale' => $USER->lang];
+        if ($usetoken) { $params += ['editor' => 'tiny', 'courseid' => $this->get_course()->id, 'msession' => \tiny_teamsmeeting\token::generate(), 'previewmode' => 'options']; }
+        $url = s($config->meetingapplink . '?' . http_build_query($params, '', '&', PHP_QUERY_RFC3986));
 
         $html = implode("\n", array(
             '<iframe id="meetingapp" class="hidden" src="' . $url . '" width="100%" height="500"></iframe>',
-            '<iframe id="meetingappcookiehelper" class="hidden" src="' . $CFG->wwwroot . '/mod/msteams/cookie.php" width="100%" height="500"></iframe>',
+            $usetoken ? '' : '<iframe id="meetingappcookiehelper" class="hidden" src="' . $CFG->wwwroot . '/mod/msteams/cookie.php" width="100%" height="500"></iframe>',
             '<p id="meetingsuccess" class="alert alert-success hidden">' . get_string('urlsuccessfullycreated', 'mod_msteams') . '</p>',
         ));
         $mform->addElement('html', $html);
